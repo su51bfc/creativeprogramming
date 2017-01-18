@@ -1,0 +1,237 @@
+<!Doctype html>
+<html lang = "en">
+<head>
+    <meta charset = "utf-8" />
+    <title>full moon</title>
+    <script>
+        window.onload = function() {
+            //canvas1
+            var canvas = document.getElementById("paper"),
+                c = canvas.getContext("2d");
+                TWO_PI=Math.PI * 2;
+    
+        
+            //moon
+            c.beginPath();
+            //drawing the moon
+            c.arc(10, 340, 50, 0, TWO_PI * 2, false);
+            //colouring the moon
+            c.fillStyle = "silver";
+            c.fill();
+
+
+            // the variable code to animate the moon
+            var posX = 50;
+            setInterval(function(){
+            
+            posX += 1;
+            //colour for sky
+            c.fillStyle = "blue";
+            //this is the size of the canvas
+            c.fillRect (0, 0, canvas.width, canvas.height); 
+            
+            c.fillStyle = "silver";
+            c.beginPath();
+            c.arc(posX, 75, 50, 0, TWO_PI * 2, false);
+            c.fill();
+
+                    
+                
+                
+
+                
+                //making the siloets of the buildings
+                c.fillStyle ="black";
+                c.fillRect (0, 200, 150, 150, canvas.width, canvas.height);
+
+                c.fillStyle ="black";
+                c.fillRect (150, 150, 150, 250, canvas.width, canvas.height);
+
+                c.strokeStyle = "black";
+                c.linewidth=15;
+                //drawing a triangelfor the church stepel
+                c.beginPath();
+                c.moveTo (150, 150);
+                c.lineTo (225, 80);
+                c.lineTo (300, 150);
+                c.closePath();
+                c.fill();
+                c.stroke();
+
+                c.fillStyle ="black";
+                c.fillRect (300, 250, 150, 150, canvas.width, canvas.height);
+
+                c.fillStyle ="black";
+                c.fillRect (450, 150, 145, 200, canvas.width, canvas.height);
+                //all the yellow blocks are for windows
+                c.fillStyle ="yellow";
+                c.fillRect (30, 225, 30, 20, canvas.width, canvas.height);
+
+                c.fillStyle ="yellow";
+                c.fillRect (90, 225, 30, 20, canvas.width, canvas.height);
+
+                c.fillStyle ="yellow";
+                c.fillRect (30, 300, 40, 20, canvas.width, canvas.height);
+
+                c.fillStyle ="yellow";
+                c.fillRect (300, 300, 25, 20, canvas.width, canvas.height);
+                //this block is gray for the door of the church
+                c.fillStyle ="gray";
+                c.fillRect (180, 188, 90, 210, canvas.width, canvas.height);
+
+                c.fillStyle ="black";
+                c.fillRect (210, 188, 25, 210, canvas.width, canvas.height);
+                // the two black rectangels for the cross on the church door
+                c.fillStyle ="black";
+                c.fillRect (182, 225, 85, 20, canvas.width, canvas.height);
+
+                c.fillStyle ="yellow";
+                c.fillRect (330, 300, 25, 20, canvas.width, canvas.height);
+
+                c.fillStyle ="yellow";
+                c.fillRect (360, 300, 25, 20, canvas.width, canvas.height);
+
+                c.fillStyle ="yellow";
+                c.fillRect (390, 300, 25, 20, canvas.width, canvas.height);
+
+                c.fillStyle ="yellow";
+                c.fillRect (420, 300, 25, 20, canvas.width, canvas.height);
+
+                //grass
+            c.fillStyle = "green";
+            c.fillRect (0, 350, 1000, 780);
+               
+                
+       
+        }, 30);
+    
+     
+
+     //static canvas
+
+     //canvas 2
+    var canvas = document.getElementById("paper1"),
+                ctx = canvas.getContext("2d");
+                TWO_PI=Math.PI * 2;
+                //colour for sky
+                ctx.fillStyle ="blue";
+                ctx.fillRect (0, 0, canvas.width, canvas.height);
+                
+
+             
+
+            //moon
+            ctx.beginPath();
+            ctx.arc(10, 340, 50, 0, TWO_PI * 2, false);
+            ctx.fillStyle = "silver";
+            ctx.fill();
+
+
+            
+            var posY = 50;
+
+            setInterval(function(){
+            
+        
+            //this is the blue sky
+            ctx.fillStyle = "blue";
+            ctx.fillRect (0, 0, canvas.width, canvas.height); 
+            
+            ctx.fillStyle = "silver";
+            ctx.beginPath();
+            ctx.arc(posY, 75, 50, 0, TWO_PI * 2, false);
+            ctx.fill();
+
+                    
+                
+                
+
+                
+                //making the siloets of the buildings
+                ctx.fillStyle ="black";
+                ctx.fillRect (0, 200, 150, 150, canvas.width, canvas.height);
+
+                ctx.fillStyle ="black";
+                ctx.fillRect (150, 150, 150, 250, canvas.width, canvas.height);
+
+                ctx.strokeStyle = "black";
+                ctx.linewidth=15;
+                //drawing a triangelfor the church stepel
+                ctx.beginPath();
+                ctx.moveTo (150, 150);
+                ctx.lineTo (225, 80);
+                ctx.lineTo (300, 150);
+                ctx.closePath();
+                ctx.fill();
+                ctx.stroke();
+
+                ctx.fillStyle ="black";
+                ctx.fillRect (300, 250, 150, 150, canvas.width, canvas.height);
+
+                ctx.fillStyle ="black";
+                ctx.fillRect (450, 150, 145, 200, canvas.width, canvas.height);
+                //all the yellow blocks are for windows
+                ctx.fillStyle ="yellow";
+                ctx.fillRect (30, 225, 30, 20, canvas.width, canvas.height);
+
+                ctx.fillStyle ="yellow";
+                ctx.fillRect (90, 225, 30, 20, canvas.width, canvas.height);
+
+                ctx.fillStyle ="yellow";
+                ctx.fillRect (30, 300, 40, 20, canvas.width, canvas.height);
+
+                ctx.fillStyle ="yellow";
+                ctx.fillRect (300, 300, 25, 20, canvas.width, canvas.height);
+                //this block is gray for the door of the church
+                ctx.fillStyle ="gray";
+                ctx.fillRect (180, 188, 90, 210, canvas.width, canvas.height);
+
+                ctx.fillStyle ="black";
+                ctx.fillRect (210, 188, 25, 210, canvas.width, canvas.height);
+                // the two black rectangels for the cross on the church door
+                ctx.fillStyle ="black";
+                ctx.fillRect (182, 225, 85, 20, canvas.width, canvas.height);
+
+                ctx.fillStyle ="yellow";
+                ctx.fillRect (330, 300, 25, 20, canvas.width, canvas.height);
+
+                ctx.fillStyle ="yellow";
+                ctx.fillRect (360, 300, 25, 20, canvas.width, canvas.height);
+
+                ctx.fillStyle ="yellow";
+                ctx.fillRect (390, 300, 25, 20, canvas.width, canvas.height);
+
+                ctx.fillStyle ="yellow";
+                ctx.fillRect (420, 300, 25, 20, canvas.width, canvas.height);
+
+                //grass
+            ctx.fillStyle = "green";
+            ctx.fillRect (0, 350, 1000, 780);
+
+                }, 30);
+            
+    
+        };
+               
+    </script>
+    <style></style>
+</head>
+<body>
+    <!--there are two canvas id -->
+    <canvas id = "paper" width="500" height="500"></canvas>
+
+    <canvas id = "paper1" width="500" height="500"></canvas>
+        
+        <p>My theme is a skyline, including a church on a clear night with the moon passing by shimmering in the background.   I created this by using HTML5 canvas. By creating a blue canvas and then creating an overlay of a bottom green rectangle I had drawn a basic page background for my buildings to sit on.  I created various black rectangles to create the skyline.  On top of the second rectangle I drew a triangle using an example from the example code.  On top of the black triangles I created small bright yellow rectangles to emulate lights being left on inside the buildings.  On the building that looks like a church I made a doorway out of a grey rectangle and then placed two black rectangles in the shape of a cross. To get all the shapes in the correct place I experimented with the coordinates to make sure they were all lined up correctly.  The moon was created using the ‘arc’ and math.pi *2 with a fill style of silver so it appears to shine brightly in the sky.
+        I used the lineTo, moveTo and closePath method to draw the triangle.  I used fillStyle and fillRect to colour the rectangles.  
+        To animate the moon I created a variable and a function to move the moon across the skyline.  I used the function to set the start position of the moon on the canvas and the setInterval function to control the speed of movement.
+        I wanted the moon to rise diagonally across the canvas, however, I had difficulty setting the correct coordinates to create the desired effect.  I am still pleased with the overall look of the animated canvas.</br></br>
+
+
+        Bibliography
+        Rosser, Z. (2016). HTML5 Canvas Tutorial. [online] YouTube. Available at: https://www.youtube.com/watch?v=N0BNbngr2IY&t=7s [Accessed 7 Dec. 2016].
+
+        </p>
+</body>
+    </html>
+     
