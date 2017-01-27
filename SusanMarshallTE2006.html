@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "utf-8" />
+	<title>My First Canvas Assignment</title>
+	<script>
+		window.onload = function(){
+		
+			var canvas = document.getElementById("paper"),
+				c = canvas.getContext("2d"),
+				TWO_PI=Math.PI * 2;
+			//colour canvas 	
+			c.fillStyle = "#a3d2ee";
+			c.fillRect (0, 0, canvas.width, canvas.height);
+
+
+				
+			//draw the circle
+			c.beginPath();
+			c.arc(200, 340, 50, 0, TWO_PI * 2, false);
+			c.fill();
+			
+
+			//draw second circle
+			c.beginPath();
+			c.arc(200, 340, 50, 0, TWO_PI * 2, false);
+			c.fill();
+			
+			//centre
+			var posX = 0
+			//positionof left eye
+			var posY = -15
+			//position of right eye
+			var posZ = 20
+			//start of mouth
+			var posA = -2
+			var posB =  21;
+			
+			setInterval(function(){
+			//below sets the speed of the circle
+			//the higher the number below the more 'skippy' the circle is
+			posX += 4
+			posY += 4
+			posZ += 4			
+			posA += 4
+			posB += 4;
+			
+	
+			c.fillStyle = "#a3d2ee";
+			c.fillRect (0, 0, canvas.width, canvas.height);	
+
+			//1st number (240 = vertical placement)
+			//2nd number (diameter of circle?)
+			c.fillStyle = "white";
+			c.beginPath();
+			c.arc(posX,  245, 50, 0, TWO_PI * 2, false);
+			c.fill();
+
+
+			//draw/colour circle
+			c.fillStyle = "white";
+			c.beginPath();
+			c.arc(posX, 340, 70, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//eyes 
+			c.fillStyle = "black";
+			c.beginPath();
+			c.arc(posX+10,230, 4, 0, TWO_PI * 2, false);
+			c.fill();
+			c.fillStyle = "black";
+			c.beginPath();
+			c.arc(posX-10, 230, 4, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//nose had to come first or not visible
+			//an orange nose
+			c.fillStyle = "orange";
+			c.beginPath();
+			c.arc(posX,  250, 5, 0, TWO_PI * 2, false);
+			c.fill();
+			
+			// draw the mouth
+			c.fillStyle = "black";
+			c.beginPath();
+			c.arc(posX, 254, 20, 0, Math.PI, false);
+			c.stroke();
+
+			//give snowman buttons
+			c.fillStyle = "black";
+			c.beginPath();
+			c.arc(posX,  300, 5, 0, TWO_PI * 2, false);
+			c.fill();
+				
+
+			//1st button
+			c.fillStyle = "black";
+			c.beginPath();
+			c.arc(posX,  320, 5, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//2nd button
+			c.fillStyle = "black";
+			c.beginPath();
+			c.arc(posX,  340, 5, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//3rd button
+			c.fillStyle = "black";
+			c.beginPath();
+			c.arc(posX,  360, 5, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//cloud
+			c.beginPath();
+      		c.moveTo(170, 80);
+      		c.bezierCurveTo(130, 100, 130, 150, 230, 150);
+      		c.bezierCurveTo(250, 180, 320, 180, 340, 150);
+      		c.bezierCurveTo(420, 150, 420, 120, 390, 100);
+      		c.bezierCurveTo(430, 40, 370, 30, 340, 50);
+      		c.bezierCurveTo(320, 5, 250, 20, 250, 50);
+      		c.bezierCurveTo(200, 5, 150, 20, 170, 80);
+
+      		// complete custom shape
+      		c.closePath();
+      		c.lineWidth = 5;
+      		c.fillStyle = "white"
+      		c.fill();
+      		
+      		//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(500, 200, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+      		//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(100, 150, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(50, 275, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(600, 300, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(700, 150, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(750, 300, 10, 0, TWO_PI * 2, false);
+			c.fill();
+      		
+
+      		//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(800, 400, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(680, 350, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(600, 70, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(820, 100, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(50, 70, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(900, 120, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(880, 170, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(920, 350, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(400, 350, 10, 0, TWO_PI * 2, false);
+			c.fill();
+
+			//snowflake
+      		c.fillStyle = "white";
+			c.beginPath();
+			c.arc(450, 250, 10, 0, TWO_PI * 2, false);
+			c.fill();
+			
+
+			//learned that I had to move this code down after the white circle or not visible
+			
+			//writing some text - not staying on the canvas- moved it from the top to under the snowman now works
+			c.fillStyle = "blue";
+			c.font = "30px Helvetica";
+			c.fillText("I am a moving Snowman!",200,205, 400, 200);
+			
+			//1st number moves text across the page
+			//The 2nd number moves text up the page
+			
+			//snow on ground
+			c.fillStyle = "white";
+			c.fillRect (0, 400, 1000, 780);
+			
+			//text in snow
+			c.fillStyle = "blue";
+			c.font = "30px Helvetica";
+			c.fillText("...Blink and you'll miss me!",300,450, 400, 200);
+			
+				
+
+			
+			}, 30);
+		
+	
+		//STATIC CANVAS
+		
+		
+			var canvas = document.getElementById("paper1"),
+				ctx = canvas.getContext("2d"),
+				TWO_PI=Math.PI * 2;
+			
+			//colour canvas 	
+			ctx.fillStyle = "#a3d2ee";
+			ctx.fillRect (0, 0, canvas.width, canvas.height);
+
+
+			
+			//draw the circle
+			ctx.beginPath();
+			ctx.arc(200, 340, 50, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+
+			//draw second circle
+			ctx.beginPath();
+			ctx.arc(200, 340, 50, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			
+			//snowman appears fully on canvas static
+			//var posX is changed so snowman appears on the canvas at that position
+			var posX = 200
+			var posD = 250
+			var posE = -150;
+
+			
+			
+			
+			
+			setInterval(function(){ 
+			
+			
+			
+			//the ctx stopped the display
+			ctx.fillStyle = "#a3d2ee";
+			ctx.fillRect (0, 0, canvas.width, canvas.height);	
+
+			//1st number (240 = vertical placement)
+			//2nd number (diameter of circle)
+			ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(posD, 245, 50, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//draw/colour circle
+			ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(posD, 340, 70, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+			//nose had to come first or not visible
+			ctx.fillStyle = "orange";
+			ctx.beginPath();
+			ctx.arc(posD, 250, 5, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+				// draw the mouth
+			ctx.fillStyle = "black";
+			ctx.beginPath();
+			ctx.arc(posD, 254, 20, 0, Math.PI, false);
+			ctx.stroke();
+
+
+
+
+			//give snowman buttons
+			ctx.fillStyle = "black";
+			ctx.beginPath();
+			ctx.arc(posD, 300, 5, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//1st button
+			ctx.fillStyle = "black";
+			ctx.beginPath();
+			ctx.arc(posD, 320, 5, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//2nd button
+			ctx.fillStyle = "black";
+			ctx.beginPath();
+			ctx.arc(posD, 340, 5, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//3rd button
+			ctx.fillStyle = "black";
+			ctx.beginPath();
+			ctx.arc(posD, 360, 5, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+			//eyes - moved this code up here as I realised that nothing from the cloud down was working
+			ctx.fillStyle = "black";
+			ctx.beginPath();
+			ctx.arc(posD-10, 235, 4, 0, TWO_PI * 2, false);
+			ctx.fill();
+			ctx.fillStyle = "black";
+			ctx.beginPath();
+			ctx.arc(posD+10, 235, 4, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+
+
+      		//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(500, 200, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+      		//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(100, 150, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(50, 275, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(600, 300, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(700, 150, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(750, 300, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+      		
+
+      		//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(800, 400, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(680, 350, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(600, 70, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(820, 100, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(50, 70, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(900, 120, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(880, 170, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(920, 350, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(400, 350, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//snowflake
+      		ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(450, 250, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+
+			//cloud
+			ctx.beginPath();
+      		ctx.moveTo(170, 80);
+      		ctx.bezierCurveTo(130, 100, 130, 150, 230, 150);
+      		ctx.bezierCurveTo(250, 180, 320, 180, 340, 150);
+      		ctx.bezierCurveTo(420, 150, 420, 120, 390, 100);
+      		ctx.bezierCurveTo(430, 40, 370, 30, 340, 50);
+      		ctx.bezierCurveTo(320, 5, 250, 20, 250, 50);
+      		ctx.bezierCurveTo(200, 5, 150, 20, 170, 80);
+
+      		// complete custom shape
+      		ctx.closePath();
+      		ctx.lineWidth = 5;
+      		ctx.fillStyle = "white"
+      		ctx.fill();
+
+			//writing some text - moved it from the top to under the snowman now works
+			ctx.fillStyle = "blue";
+			ctx.font = "30px Helvetica";
+			ctx.fillText("I refuse to move!",200,205, 400, 200);
+			
+			//1st number moves text across the page
+			//The 2nd number moves text up the page
+			
+			//draw snow on ground
+			ctx.fillStyle = "white";
+			ctx.fillRect (0, 400, 1000, 780);
+			
+			//text in snow
+			ctx.fillStyle = "blue";
+			ctx.font = "30px Helvetica";
+			ctx.fillText("...you will have to animate me if you want me to move....!",300,450, 400, 200);
+
+
+			
+			
+
+			
+			}, 30);
+			
+		
+		};
+
+	</script>
+	<style></style>
+	</head>
+<body>
+<h1>My First Canvas Assignment</h1>
+	<canvas id = "paper" width = "1000" height = "500">
+	Go get Chrome!!</canvas>
+	<p></br></br></p>
+	<canvas id="paper1" width = "1000" height = "500" border = "10px"></canvas>
+
+	
+	<p> The rationale behind my canvas project was based on the classroom code we had looked at during lectures. The development process began by looking at the different shapes that had been created in our classroom examples, and how some of the shapes had been animated. I thought about what I could create by breaking up the code to develop my own individual animation.</p> 
+
+	<p>The original idea was to use the two spinning circles and add a rectangular box above and animate it to look like a car. I had difficulty creating this; the rectangle created would not appear on the canvas at the same time as the animated circles. </p>
+	
+	<p>I decided to start from scratch with the code and look more closely at how shapes were created before starting any animation (Rowell, 2016). The theme chosen is a winter wonderland.</p>
+
+	<p>The canvas is based on the moving circle code from lecture (Rowell, 2016).  I altered the size of the circles and repositioned them to create the shape of a snowman. Manipulating the circles allowed me to understand how each element of the arc() method worked. To create an arc with HTML5 Canvas, we can use the arc() method. Arcs are defined by a center point, a radius, a starting angle, an ending angle, and the drawing direction.  Arcs can be styled with the lineWidth, strokeStyle, and lineCap properties. An arc a section of the circumference of an imaginary circle. This imaginary circle can be defined by x, y, and radius. We can define the arc itself with two points along the imaginary circle's circumference defined by startAngle and endAngle. These two angles are defined in radians and form imaginary lines that originate from the center of the circle and intersect the ends of the arc that we wish to create (Html5canvastutorials.com, 2016).  The final argument of the arc method is antiClockwise which defines the direction of the arc path between its two ending points. Unless otherwise specified, this argument is defaulted to false (boolean value), which causes the arc to be drawn clockwise. Using Math.PI * 2 allows the drawing of a complete circle. Using a value higher will overdraw the circle a lower  value will underdraw the circle.
+
+   	<p>The canvas is coloured blue using the fillRect() method to create a winter sky and a second rectangle at the bottom is the snow using the same method. I added the second rectangle (white) to demonstrate that I could create a shape, position it correctly on the canvas and apply style to it.</p>
+
+	<p>The buttons and nose were added to make the shape look like a snowman. The create the two circles for the eyes and positioned them correctly,variable posX was adjusted by -10 and + 10.</p>
+
+	<p>The text was added in two places to demonstrate that my abilities to place the code correctly have improved over the course of the task. The cloud was drawn to add another dimension to the canvas (Stackoverflow.com, 2016). It allowed me to look at the effect of the bezier curve and how changing the dimensions of the shape could change the clouds angles from soft curves to sharp angles.The bezierCurveTo() method adds a point to the current path by using the specified control points that represent a cubic Bézier curve(W3schools.com, 2016).</p>
+
+	<p>The snowflakes were added as white circles, again using the method arc() and math.PI * 2 to draw complete circles; drawing these allowed me to understand better the co-ordinates of the canvas. Changing the co-ordinates of each circle made me aware of where on the canvas they would appear.</P><P>The onload function loads the canvas on the page and uses the getElementById property to change the content of the element in the DOM. To animate the canvas I declared a function and specified the functions name and type. The function moves the elements on the canvas and controls the speed of the movement. I played with the speed of the animation; commenting out certain parts of the code allowed me to understand how each element affected the objects on the canvas. This gave me confidence to break the code and examine how I could use it to create my final canvas.</p>
+
+	<p>In hindsight, my initial idea was unsuccessful because the code was not in the correct order on the canvas to allow the rectangle to appear either before or after the animation started. I discovered this the reason when I 'broke' my snowman code but the text stayed on the page.  When looking at how I had broken the code I understood the importance of code placement.  Moving the 'text' code allowed the text to remain constant on the canvas. This made me aware  that when constructing the code it must be in the correct order</p>
+
+	
+
+	<p>Bibliography</p>
+		<p>Stackoverflow.com. (2016). How to draw Cloud shape in HTML5 Canvas?. [online] Available at: http://stackoverflow.com/questions/19541192/how-to-draw-cloud-shape-in-html5-canvas [Accessed 30 Nov. 2016].</p>
+		<p>W3schools.com. (2016). HTML canvas bezierCurveTo() Method. [online] Available at: http://www.w3schools.com/TAGs/canvas_beziercurveto.asp [Accessed 9 Dec. 2016].</p>
+		<p>Html5canvastutorials.com. (2016). HTML5 Canvas Arc Tutorial. [online] Available at: http://www.html5canvastutorials.com/tutorials/html5-canvas-arcs/ [Accessed 9 Dec. 2016].</p>
+		<p>Rosser, Z. (2016). HTML5 Canvas Tutorial. [online] YouTube. Available at: https://www.youtube.com/watch?v=N0BNbngr2IY&t=7s [Accessed 7 Dec. 2016].</p>
+		<p>Rowell, E. (2016). HTML5 Canvas Cookbook. [online] Html5canvastutorials.com. Available at: http://www.html5canvastutorials.com/cookbook/#ch4 [Accessed 19 Nov. 2016].</p>
+		
+
+
+</html>

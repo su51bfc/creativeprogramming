@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "utf-8" />
+	<title>Assignment</title>
+	<script>
+		window.onload = function(){
+			
+			//canvas one
+			var canvas = document.getElementById("paper"),
+				c = canvas.getContext("2d"),
+				TWO_PI=Math.PI * 2;
+			
+			//canvas colour 
+			c.fillStyle = "black";
+			c.fillRect (0, 0, canvas.width, canvas.height);	
+			
+			//static star
+			c.fillStyle = "white";
+			c.beginPath();
+			c.arc(200, 340, 10, 0, TWO_PI * 2, false);
+			c.fill();
+			
+			//static star
+			c.fillStyle = "white";
+			c.beginPath();
+			c.arc(100, 240, 10, 0, TWO_PI * 2, false);
+			c.fill();
+			
+			//static star
+			c.fillStyle = "white";
+			c.beginPath();
+			c.arc(150, 450, 8, 0, TWO_PI * 2, false);
+			c.fill();
+			
+			//static star
+			c.fillStyle = "white";
+			c.beginPath();
+			c.arc(450, 400, 5, 0, TWO_PI * 2, false);
+			c.fill();
+			
+			//static star
+			c.fillStyle = "white";
+			c.beginPath();
+			c.arc(50, 380, 7, 0, TWO_PI * 2, false);
+			c.fill();
+			
+			//static star
+			c.fillStyle = "white";
+			c.beginPath();
+			c.arc(300, 300, 7, 0, TWO_PI * 2, false);
+			c.fill();
+			
+			//static star
+			c.fillStyle = "white";
+			c.beginPath();
+			c.arc(480, 480, 10, 0, TWO_PI * 2, false);
+			c.fill();
+			
+			//static star
+			c.fillStyle = "white";
+			c.beginPath();
+			c.arc(180, 120, 7, 0, TWO_PI * 2, false);
+			c.fill();
+			
+			//static star
+			c.fillStyle = "white";
+			c.beginPath();
+			c.arc(400, 120, 7, 0, TWO_PI * 2, false);
+			c.fill();
+			
+			//animation
+			var posX = 0;
+			posY = 60;
+			setInterval(function(){
+			
+			posX += 10;
+			
+			if (posX > 600){
+			 posY += 3;
+			 posX = 600;
+			 
+			 
+			}
+			
+			c.fillStyle = "rgba(0,0,0,0.02)";
+			c.fillRect (0, 0, canvas.width, canvas.height);	
+			
+			//shooting star
+			c.fillStyle = "yellow";
+			c.beginPath();
+			c.arc(posX, posY, 40, 0, TWO_PI * 2, false);
+			c.fill();
+			
+			}, 30);
+			
+			
+			
+		
+		
+		
+			//canvas two
+			var canvas = document.getElementById("paper1"),
+				ctx = canvas.getContext("2d"),
+				TWO_PI=Math.PI * 2;
+				
+			//canvas colour
+			ctx.fillStyle = "black";
+			ctx.fillRect (0, 0, canvas.width, canvas.height);	
+			
+			//static star
+			ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(200, 340, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+			//static star
+			ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(100, 240, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+			//static star
+			ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(150, 450, 8, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+			//static star
+			ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(450, 400, 5, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+			//static star
+			ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(50, 380, 7, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+			//static star
+			ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(300, 300, 7, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+			//static star
+			ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(480, 480, 10, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+			//static star
+			ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(180, 120, 7, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+			//static star
+			ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.arc(400, 120, 7, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+			//animation
+			var posX = 0;
+			posY = 60;
+			setInterval(function(){
+			
+			posX += 10;
+			
+			if (posX > 600){
+			 posY += 3;
+			 posX = 600;
+			 
+			 
+			}
+			
+			ctx.fillStyle = "rgba(0,0,0,0.02)";
+			ctx.fillRect (0, 0, canvas.width, canvas.height);	
+			
+			//shooting star
+			ctx.fillStyle = "yellow";
+			ctx.beginPath();
+			ctx.arc(50, 50, 40, 0, TWO_PI * 2, false);
+			ctx.fill();
+			
+			}, 30);
+			
+			
+			
+		
+		};
+		
+	</script>
+	<style></style>
+	</head>
+<body>
+	
+	<canvas id = "paper" width = "500" height = "500">
+	Go get Chrome!!</canvas>
+	<p></br></br></p>
+	<canvas id="paper1" width = "500" height = "500" border = "10px"></canvas>
+	
+	<p>Evaluation <br> For this assignment i have created a shooting star in the night sky, using canvas.<br> I have done a static image and a moving image to show i can create a still image as well as animated images.<br>The reason i decided to create the shooting star is because i am still not every confident with coding <br> so to create a shooting star in the night sky would be quite simple to do but still be effective.<br> For the shooting star i have coloured it in yellow, i did this so you can easily tell which is the shooting star against the other stars<br>I have chosen to use the circle shape for my stars because i did have a little trouble getting another shape to show on the canvas. <br> The shooting star moves from left to right at the top of the canvas with all the other white stars underneath.<br> all the other stars are coloured in white, i did this to help them stand out against the black background.<br> For the colours of the stars i decided to use the words of the colours rather than the hexadecimal numbers,<br> i did this because the numbers didn't seem to work how i wanted them too <br>I have tried to space out the white stars as well as i could and make them different sizes too.<br> I did this to try and create the effect of stars in the night sky with the stars at different distances to the viewer .<br> Even though the images are basic and my coding skills are not great, i am pleased with what i have managed to create.<br>While creating the code most things did go to plan however i did have a little trouble on the positions of the white stars <br> and the hexadecimal numbers for the colours.<br> I wanted to space the stars out evenly but i kept getting confused with what numbers changed what.<br>And i wanted to use hexadecimal numbers but this was unsuccessfull. <br> However after playing around with the numbers in the code i was able to space out the stars in a way i was happy with<br> and for the colours i just decided to use the words instead of the hexadecimal numbers.<br>To make the animation work i used one function as i only wanted to animate one star. I did this by using an x and a y position <br> To help me achieve this i referred to all the code that we learnt in lectures as well as the youtube video html 5 canvas tutorial <br><br> Reference <br> Rosser, Z. (2016). HTML5 Canvas Tutorial. [online] YouTube.<br>
+	Available at: https://www.youtube.com/watch?v=N0BNbngr2IY&t=7s [Accessed 7 Dec. 2016].</p>
+</body>
+</html>
